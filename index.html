@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="fr-FR">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<link rel="icon" type="image/png" href="logo.png" />
+		<title>Velovelo - Réservation de vélo en ligne à Mulhouse</title>
+		<meta name="description" content="Réservation de vélo en ligne à Mulhouse. Trouvez, Réservez et venez chercher votre vélo. C'est très facile. ">
+		<meta property="og:title" content="" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="#" />
+		<meta property="og:image" content="logo.png" />
+
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" /> 
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/responsive.css" />
+		<!-- leaflet -->
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+   		integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
+
+		
+	</head>
+	<body>
+	
+		<!-- Header area  -->
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			  <!-- LOGO -->
+			  <a class="navbar-brand" href="#accueil">
+			  	<img src="logo.png" class="logo" alt="rerservation de velo en ligne" title="velovelo"/>
+			  </a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+			  <!-- NAV -->
+			  <div class="collapse navbar-collapse" id="navbarNav">
+			    <ul class="navbar-nav">
+			      <li class="nav-item ">
+			        <a class="nav-link" href="#accueil"> Accueil </a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="#map"> Stations </a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link " href="#reservation"> Réservations </a>
+			      </li>
+			    </ul>
+			  </div>
+			</nav>
+		</header>
+
+		<section id="accueil" class="velovelo">
+	        <h1> Réservation de Vélo en ligne à MULHOUSE</h1>
+	        <!-- SLIDER -->
+			<div class="slider" id="showSliderBloc">
+				<i class="fas fa-angle-left arrowLeft"></i>
+	        	<i class="fas fa-angle-right arrowRight"></i>
+	        	<i class="fas fa-play play"></i>
+	        	<i class="fas fa-pause-circle pause"></i> 
+	        	<p class="description">Réservation de vélo en ligne à Mulhouse </p>
+				<div class="slider-images">
+					<!-- slides -->
+					<img src="images/velo3.jpg" alt="Réservation de vélo en ligne à Mulhouse" class="slide" />
+					<img src="images/velo2.jpg" alt="1. Trouvez un point de Location" class="slide" />
+					<img src="images/reservation2.png" alt="2. Réservez directement en ligne" class="slide" />
+					<img src="images/velo4.jpg" alt="3. Votre vélo vous attend" class="slide" />
+
+				</div> 
+	        </div>
+    	</section>
+
+		<!-- Section Map & Reservation Form-->
+		<section id="map" class="velovelo">
+			
+			<h2> Réservation de vélo en ligne à Mulhouse</h2>
+			<div id="showMapBloc">
+				<div id="getMap">
+				</div>
+				<div class="showReservations">
+					<h3>Détails de la station</h3>
+					<span>Status de la station :</span>
+					<div class="stationStatusShow">
+					</div>
+					<span>Nom de la station :</span>
+					<div class="stationNameShow">
+					</div>
+					<span>Adresse de la Station  :</span>
+					<div class="stationAddressShow">
+					</div>
+					<div class="placesBloc">
+					</div>
+					<div class="showVelos">
+					</div>
+					<div class="banking"></div>
+					<!-- Reservation Form-->
+					<form id="reservation-form">
+						<label for="nom">Nom : </label>
+						<input type="text" id="nom" required/><br/>
+						<label for="prenom">Prénom : </label>
+						<input type="text" id="prenom" required/><br/>
+						<input class="btn" type="submit" value="Réserver" id="reservationButton"/>
+						<div id="canvasBloc"></div>
+						<!-- Section for 3 buttons-->
+						<div id="showThreeButtons">
+							<div>Veuillez signer pour confirmer votre réservation en ligne.</div>
+							<button class="btn" type="button" id="annulerButton">Annuler</button>
+							<button class="btn" type="button" id="resetButton" >Réinitialiser</button>
+							<button class="btn" type="button" id="confirmer">Confirmer</button>
+						</div>
+					</form>
+				</div>
+			</div>
+
+		</section>
+
+		<!-- Confirmational text para -->
+		<section id="reservation" class="velovelo">
+			<h2>Ma réservation </h2>
+			<div class="showConfirmText">
+
+				<div class="showText">
+
+				</div>
+				<span class="getTime"></span>
+			</div>
+
+		</section>
+
+        <!-- FOOTER -->
+        <footer>
+        	Tout droits Réservés | <a href="https://github.com/raja-gd/projet3-OpenclassRooms"><i class="fa fa-github" aria-hidden="true"></i>Github</a>  | <a href="https://www.arshman.fr">Hébergement Web</a>  | Projet3 OpenClassRooms 
+        </footer>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
+        <script src="js/Ajax.js"></script>
+        <script src="js/Slider.js"></script>
+        <script src="js/Map.js"></script>
+		<script src="js/Reservation.js"></script>
+		<script src="js/Canvas.js"></script>
+		<script src="js/Main.js"></script>
+	</body>
+</html>

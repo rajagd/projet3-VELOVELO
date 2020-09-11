@@ -1,0 +1,112 @@
+
+
+@media (min-width: 1445px) and (max-width: 1920px) {
+
+    h1{
+        margin: auto 35%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    h2{
+        margin: auto 38%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .slider-images{
+        height: 703px;
+    }
+
+    #getMap{
+        height: 703px;
+    }
+
+}
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+    h1{
+        font-size: 1em;
+        margin:auto 5%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    h2{
+        font-size: 1em;
+        margin:auto 5%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #showMapBloc{
+        flex-wrap: wrap;
+    }
+
+    #getMap{
+        width: 100% !important;
+        height: 310px;
+    }
+
+    .showReservations{
+        width: 100% !important;
+    }
+
+    .slider-images {
+        height: 310px;
+    }
+
+    .description{
+        font-size: 14px;
+        left: 40px;
+        top: 138px;
+        padding: 10px;
+        max-width: 30%;
+    }
+}
+
+/*
+ 320
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+    h1{
+        font-size: 1em;
+        margin:auto 5%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    h2{
+        font-size: 1em;
+        margin:auto 5%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #showMapBloc{
+        flex-wrap: wrap;
+    }
+
+    #getMap{
+        width: 100% !important;
+        height: 310px;
+    }
+
+    .showReservations{
+        width: 100% !important;
+    }
+
+    .slider-images {
+        height: 310px;
+    }
+
+    .description{
+        font-size: 14px;
+        left: 40px;
+        top: 138px;
+        padding: 10px;
+        max-width: 30%;
+    }
+}
